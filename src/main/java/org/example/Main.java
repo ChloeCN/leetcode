@@ -6,9 +6,9 @@ import static java.lang.Integer.sum;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+//        System.out.println("Hello world!");
 //        findMedianSortedArrays(new int[]{1, 3}, new int[]{2,4});
-    }
+//    }
 //    static double findMedianSortedArrays(int[] nums1, int[] nums2) {
 //        int n = nums1.length + nums2.length;
 //        int[] numAll =new int[n];
@@ -28,5 +28,15 @@ public class Main {
 //        }
 //        System.out.println(res);
 //        return res;
-//    }
+    }
+    String[] country = {"","+*-","+**-","+***-"};
+    public String maskPII(String s){
+        int at = s.indexOf("@");
+        if(at > 0){
+            s = s.toLowerCase();
+            return (s.charAt(0) + "*****" + s.substring(at - 1)).toLowerCase();
+        }
+        s = s.replaceAll("[^0-9]","");
+        return country[s.length() - 10] + "***-***-" + s.substring(s.length() - 4);
+    }
 }

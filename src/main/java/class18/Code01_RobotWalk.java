@@ -20,7 +20,7 @@ package class18;
  * 规定机器人必须走K步，最终能来到P位置(P也是1~N中的一个)的方法有多少种
  * 给定四个参数 N、M、K、P，返回方法数
  */
-public class Code1_RobotWalk {
+public class Code01_RobotWalk {
     public static int ways1(int N,int start,int aim,int k){
         if(N < 2 || start < 1 || start > N || aim < 1 || aim > N || k < 1){
             return -1;
